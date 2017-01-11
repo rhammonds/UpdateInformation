@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@{
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" data-semver="3.3.2" data-require="bootstrap@3.3.2"/>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js" data-semver="3.3.2" data-require="bootstrap@3.3.2"></script>
+
+    <title>Update Information</title>
+</head>
+<body>
+    <div class="form-group row"  >
+        <div class="col-md-5" id="container"></div>
+        
+    </div>
+</body>
+
+</html>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.min.js"></script>
+<script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+<script src="~/Scripts/components/app.bundle.jsx" type="text/babel"></script>

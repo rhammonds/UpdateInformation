@@ -1,0 +1,112 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "1.14.0",
+  "hash": "2e4bde54e3ca5ccd31c3",
+  "time": 9464,
+  "publicPath": "",
+  "assetsByChunkName": {
+    "main": "./Scripts/components/app.bundle.jsx"
+  },
+  "assets": [
+    {
+      "name": "./Scripts/components/app.bundle.jsx",
+      "size": 6212,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "emitted": true
+    }
+  ],
+  "chunks": [
+    {
+      "id": 0,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "extraAsync": false,
+      "size": 4697,
+      "names": [
+        "main"
+      ],
+      "files": [
+        "./Scripts/components/app.bundle.jsx"
+      ],
+      "hash": "a9c61f2c699bb14c4f2b",
+      "parents": [],
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "c:\\users\\ricky\\node_modules\\babel-loader\\lib\\index.js?{\"babelrc\":false,\"presets\":[\"es2015\",\"react\"]}!c:\\users\\ricky\\documents\\visual studio 2015\\Projects\\UpdateInformation\\Scripts\\components\\app.jsx",
+          "name": "./Scripts/components/app.jsx",
+          "index": 0,
+          "index2": 0,
+          "size": 4697,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "assets": [],
+          "issuer": null,
+          "profile": {
+            "factory": 24,
+            "building": 9419
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "reasons": [],
+          "source": "\"use strict\";\n\nvar Button = React.createClass({\n    displayName: \"Button\",\n\n    localHandleClick: function localHandleClick() {\n        this.props.localHandleClick(this.props.increment);\n    },\n    render: function render() {\n        return React.createElement(\n            \"button\",\n            { onClick: this.localHandleClick },\n            \"+\",\n            this.props.increment\n        );\n    }\n});\n\nvar Result = React.createClass({\n    displayName: \"Result\",\n\n    render: function render() {\n        return React.createElement(\n            \"div\",\n            null,\n            this.props.localCounter\n        );\n    }\n});\n\nvar App2 = React.createClass({\n    displayName: \"App2\",\n\n    getInitialState: function getInitialState() {\n        return { counter: 0 };\n    },\n    handleClick: function handleClick(increment) {\n        this.setState({ counter: this.state.counter + increment });\n    },\n    render: function render() {\n        return React.createElement(\n            \"div\",\n            null,\n            React.createElement(Button, { localHandleClick: this.handleClick, increment: 1 }),\n            React.createElement(Button, { localHandleClick: this.handleClick, increment: 5 }),\n            React.createElement(Button, { localHandleClick: this.handleClick, increment: 10 }),\n            React.createElement(Button, { localHandleClick: this.handleClick, increment: 100 }),\n            React.createElement(Result, { localCounter: this.state.counter })\n        );\n    }\n});\nvar Results = React.createClass({\n    displayName: \"Results\",\n\n    render: function render() {\n        React.createElement(\n            \"div\",\n            null,\n            React.createElement(\n                \"label\",\n                null,\n                \"The Value is:\"\n            ),\n            React.createElement(\"label\", { id: \"Label1\", className: \"control-label col-md-4\" })\n        );\n    }\n});\n\nvar App = React.createClass({\n    displayName: \"App\",\n\n    getInitialState: function getInitialState() {\n        return { nameInfo: \"\" };\n    },\n    handleKeyPress: function handleKeyPress(e) {\n        var x = this.state.nameInfo + String.fromCharCode(e.which);\n\n        //alert(String.fromCharCode(e.which));\n        //this.setState({ nameInfo: String.fromCharCode(e.which) });\n        //this.state.nameInfo += String.fromCharCode(e.which);\n        this.setState({ nameInfo: x });\n    },\n\n    render: function render() {\n\n        return React.createElement(\n            \"div\",\n            null,\n            React.createElement(\n                \"div\",\n                { className: \"form-group\", style: { margin: 0, marginBottom: 5, padding: 0 } },\n                React.createElement(\n                    \"label\",\n                    { htmlFor: \"NameInfo\", className: \"control-label col-md-4\" },\n                    \"Name:\"\n                ),\n                React.createElement(\n                    \"div\",\n                    { className: \"col-md-8\" },\n                    React.createElement(\"input\", { type: \"text\", id: \"NameInfo\", className: \"form-control\", onKeyPress: this.handleKeyPress })\n                )\n            ),\n            React.createElement(\n                \"div\",\n                { className: \"form-group\", style: { margin: 0, marginBottom: 5, padding: 0 } },\n                React.createElement(\n                    \"label\",\n                    { htmlFor: \"AddressInfo\", className: \"control-label col-md-4\" },\n                    \"Address:\"\n                ),\n                React.createElement(\n                    \"div\",\n                    { className: \"col-md-8\" },\n                    React.createElement(\"input\", { type: \"text\", id: \"AddressInfo\", className: \"form-control\" })\n                )\n            ),\n            React.createElement(\n                \"div\",\n                { className: \"form-group\", style: { margin: 0, marginBottom: 5, padding: 0 } },\n                React.createElement(\n                    \"label\",\n                    { htmlFor: \"CityInfo\", className: \"control-label col-md-4\" },\n                    \"City:\"\n                ),\n                React.createElement(\n                    \"div\",\n                    { className: \"col-md-8\" },\n                    React.createElement(\"input\", { type: \"text\", id: \"CityInfo\", className: \"form-control\" })\n                )\n            ),\n            React.createElement(\n                \"label\",\n                { id: \"Label1\", className: \"control-label col-md-4\" },\n                this.state.nameInfo\n            ),\n            React.createElement(Results, { nameInfo: this.state.nameInfo })\n        );\n    }\n});\n\nReactDOM.render(React.createElement(App, null), document.getElementById('container'));"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": 0,
+          "module": "c:\\users\\ricky\\node_modules\\babel-loader\\lib\\index.js?{\"babelrc\":false,\"presets\":[\"es2015\",\"react\"]}!c:\\users\\ricky\\documents\\visual studio 2015\\Projects\\UpdateInformation\\Scripts\\components\\app.jsx",
+          "moduleIdentifier": "c:\\users\\ricky\\node_modules\\babel-loader\\lib\\index.js?{\"babelrc\":false,\"presets\":[\"es2015\",\"react\"]}!c:\\users\\ricky\\documents\\visual studio 2015\\Projects\\UpdateInformation\\Scripts\\components\\app.jsx",
+          "moduleName": "./Scripts/components/app.jsx",
+          "loc": "",
+          "name": "main",
+          "reasons": []
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "c:\\users\\ricky\\node_modules\\babel-loader\\lib\\index.js?{\"babelrc\":false,\"presets\":[\"es2015\",\"react\"]}!c:\\users\\ricky\\documents\\visual studio 2015\\Projects\\UpdateInformation\\Scripts\\components\\app.jsx",
+      "name": "./Scripts/components/app.jsx",
+      "index": 0,
+      "index2": 0,
+      "size": 4697,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "assets": [],
+      "issuer": null,
+      "profile": {
+        "factory": 24,
+        "building": 9419
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "reasons": [],
+      "source": "\"use strict\";\n\nvar Button = React.createClass({\n    displayName: \"Button\",\n\n    localHandleClick: function localHandleClick() {\n        this.props.localHandleClick(this.props.increment);\n    },\n    render: function render() {\n        return React.createElement(\n            \"button\",\n            { onClick: this.localHandleClick },\n            \"+\",\n            this.props.increment\n        );\n    }\n});\n\nvar Result = React.createClass({\n    displayName: \"Result\",\n\n    render: function render() {\n        return React.createElement(\n            \"div\",\n            null,\n            this.props.localCounter\n        );\n    }\n});\n\nvar App2 = React.createClass({\n    displayName: \"App2\",\n\n    getInitialState: function getInitialState() {\n        return { counter: 0 };\n    },\n    handleClick: function handleClick(increment) {\n        this.setState({ counter: this.state.counter + increment });\n    },\n    render: function render() {\n        return React.createElement(\n            \"div\",\n            null,\n            React.createElement(Button, { localHandleClick: this.handleClick, increment: 1 }),\n            React.createElement(Button, { localHandleClick: this.handleClick, increment: 5 }),\n            React.createElement(Button, { localHandleClick: this.handleClick, increment: 10 }),\n            React.createElement(Button, { localHandleClick: this.handleClick, increment: 100 }),\n            React.createElement(Result, { localCounter: this.state.counter })\n        );\n    }\n});\nvar Results = React.createClass({\n    displayName: \"Results\",\n\n    render: function render() {\n        React.createElement(\n            \"div\",\n            null,\n            React.createElement(\n                \"label\",\n                null,\n                \"The Value is:\"\n            ),\n            React.createElement(\"label\", { id: \"Label1\", className: \"control-label col-md-4\" })\n        );\n    }\n});\n\nvar App = React.createClass({\n    displayName: \"App\",\n\n    getInitialState: function getInitialState() {\n        return { nameInfo: \"\" };\n    },\n    handleKeyPress: function handleKeyPress(e) {\n        var x = this.state.nameInfo + String.fromCharCode(e.which);\n\n        //alert(String.fromCharCode(e.which));\n        //this.setState({ nameInfo: String.fromCharCode(e.which) });\n        //this.state.nameInfo += String.fromCharCode(e.which);\n        this.setState({ nameInfo: x });\n    },\n\n    render: function render() {\n\n        return React.createElement(\n            \"div\",\n            null,\n            React.createElement(\n                \"div\",\n                { className: \"form-group\", style: { margin: 0, marginBottom: 5, padding: 0 } },\n                React.createElement(\n                    \"label\",\n                    { htmlFor: \"NameInfo\", className: \"control-label col-md-4\" },\n                    \"Name:\"\n                ),\n                React.createElement(\n                    \"div\",\n                    { className: \"col-md-8\" },\n                    React.createElement(\"input\", { type: \"text\", id: \"NameInfo\", className: \"form-control\", onKeyPress: this.handleKeyPress })\n                )\n            ),\n            React.createElement(\n                \"div\",\n                { className: \"form-group\", style: { margin: 0, marginBottom: 5, padding: 0 } },\n                React.createElement(\n                    \"label\",\n                    { htmlFor: \"AddressInfo\", className: \"control-label col-md-4\" },\n                    \"Address:\"\n                ),\n                React.createElement(\n                    \"div\",\n                    { className: \"col-md-8\" },\n                    React.createElement(\"input\", { type: \"text\", id: \"AddressInfo\", className: \"form-control\" })\n                )\n            ),\n            React.createElement(\n                \"div\",\n                { className: \"form-group\", style: { margin: 0, marginBottom: 5, padding: 0 } },\n                React.createElement(\n                    \"label\",\n                    { htmlFor: \"CityInfo\", className: \"control-label col-md-4\" },\n                    \"City:\"\n                ),\n                React.createElement(\n                    \"div\",\n                    { className: \"col-md-8\" },\n                    React.createElement(\"input\", { type: \"text\", id: \"CityInfo\", className: \"form-control\" })\n                )\n            ),\n            React.createElement(\n                \"label\",\n                { id: \"Label1\", className: \"control-label col-md-4\" },\n                this.state.nameInfo\n            ),\n            React.createElement(Results, { nameInfo: this.state.nameInfo })\n        );\n    }\n});\n\nReactDOM.render(React.createElement(App, null), document.getElementById('container'));"
+    }
+  ],
+  "filteredModules": 0,
+  "children": []
+}
